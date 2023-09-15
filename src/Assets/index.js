@@ -12,6 +12,11 @@ import tailwind from "./tech/tailwind.png";
 import bootstrap from "./tech/bootstrap.png";
 import git from "./tech/git.png";
 
+
+import carrent from "./carrent.png";
+import jobit from "./jobit.png";
+import tripguide from "./tripguide.png";
+
 export {
   javascript,
   java,
@@ -26,4 +31,7 @@ export {
   appscript,
   php,
   git,
+  carrent,
+  jobit,
+  tripguide,
 };

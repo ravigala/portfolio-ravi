@@ -1,40 +1,60 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import { CgWebsite } from 'react-icons/cg';
+import { BsGithub } from 'react-icons/bs';
 
-function ProjectCards(props) {
+const ProjectCards = ({
+  name,
+  description,
+  image,
+  source_code_link,
+  demo_link,
+  details_link,
+}) => {
   return (
-    <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
+    <Card className='project-card-view'>
+      <div className="position-absolute top-0 end-0 m-3 card-img_hover">
+        <div
+          className="black-gradient w-10 h-10 rounded-circle d-flex justify-content-center align-items-center cursor-pointer"
+        >
+          <Button href={source_code_link} target='_blank'>
+          <BsGithub />
         </Button>
-        {"\n"}
-        {"\n"}
+        </div>
+      </div>
+      <Card.Img
+        variant='top'
+        src={image}
+        alt='project_image'
+        style={{ maxHeight: '250px' }}
+      />
+      
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text style={{ textAlign: 'justify' }}>{description}</Card.Text>
+        
+        <Button variant='primary' href={details_link} target='_blank'>
+          <CgWebsite /> &nbsp; Details
+        </Button>{' '}
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
+        {/* <Button variant='primary' href={source_code_link} target='_blank'  style={{ marginLeft: '10px' }}>
+          <BsGithub /> &nbsp; Code
+        </Button>{' '} */}
 
-        {!props.isBlog && props.demoLink && (
+        {demo_link && (
           <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
+            variant='primary'
+            href={demo_link}
+            target='_blank'
+            style={{ marginLeft: '10px' }}
           >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+            Demo
           </Button>
         )}
       </Card.Body>
     </Card>
   );
-}
+};
+
 export default ProjectCards;

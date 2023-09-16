@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import { projects } from "../../constants";
@@ -15,9 +15,9 @@ function Projects({ numProjects }) {
         <h1 className="project-heading purple">
           <strong className="purple">Projects</strong>
         </h1>
-        
+
         <p style={{ color: "white" }}>
-        Hello there! Welcome to my project gallery. The following projects showcase my skills and experience through real-world examples of my work. They are more than just lines of code – they represent my journey. Each project includes a detailed explanation, links to code repositories, and live demos. 
+          Hello there! Welcome to my project gallery. The following projects showcase my skills and experience through real-world examples of my work. They are more than just lines of code – they represent my journey. Each project includes a detailed explanation, links to code repositories, and live demos.
         </p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
@@ -27,6 +27,13 @@ function Projects({ numProjects }) {
             </Col>
           ))}
         </Row>
+
+        {/* Conditionally render the button */}
+        {numProjects && (
+          <div className="text-center">
+            <Button variant="primary">View All Projects</Button>
+          </div>
+        )}
       </Container>
     </Container>
   );

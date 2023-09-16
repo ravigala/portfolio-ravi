@@ -6,6 +6,7 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import Skills from "./Skills";
+import Projects from "../Projects/Projects";
 
 function Home() {
   return (
@@ -45,6 +46,7 @@ function Home() {
       </Container>
       <Home2 />
       <Skills />
+      <Projects numProjects={2}/>
     </section>
   );
 }

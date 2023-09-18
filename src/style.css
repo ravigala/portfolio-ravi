@@ -247,7 +247,7 @@ button:focus {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .home-header {
@@ -404,15 +404,24 @@ button:focus {
 /* --------- */
 .footer {
   background-color: rgb(10, 4, 22);
-  bottom: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  /* bottom: 0 !important; */
   padding-top: 15px !important;
   padding-bottom: 15px !important ;
+  gap: 1.5rem;
+}
+
+.footer a{
+  color: #623686 !important;
+  border-color: #623686 !important;
 }
 
 .footer a:hover{
-  color: #6d20c5d7;
-  /* box-shadow: 0 0 5px #6d20c5d7; */
-  text-shadow: 0 0 2px #6d20c5d7;
+  color: #6d20c5d7 !important;
+  border-color: #6d20c5d7 !important;
+  cursor: pointer;
 }
 
 .footer-copywright {
@@ -454,9 +463,14 @@ button:focus {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 100px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  /* background-image: var(--section-background-color) !important; */
+}
+
+.project-content {
+  padding: 9rem 0 2rem !important;
+  color: whitesmoke;
 }
 
 .project-card {
@@ -534,13 +548,14 @@ button:focus {
   color: #fff !important;
   background-color: #6d20c5d7 !important;
   border-color: #6d20c5d7 !important;
+  cursor: pointer;
 }
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-.project-heading {
-  color: white !important;
+.section-heading {
+  color: var(--imp-text-color) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -552,7 +567,7 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 100px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
@@ -606,6 +621,32 @@ button:focus {
     padding-top: 0 !important;
   }
 }
+
+
+/* --------- */
+/* Contact */
+/* --------- */
+.contact-section{
+  position: relative !important;
+  padding-top: 100px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+
+}
+
+.contact-form{
+  background-color: transparent !important;
+  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
+  color: white !important;
+  /* border:1px solid #8a49a8; */
+}
+
+
+
+
+
+
 /* --------- */
 /* Resume */
 /* --------- */

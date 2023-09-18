@@ -4,7 +4,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <div className="footer d-flex justify-content-center align-items-center" style={{gap: '1.5rem'}}>
+    <div className="footer">
       <a
         href="https://github.com/ravigala"
         target="_blank"

@@ -9,12 +9,11 @@ const ProjectCards = ({
   description,
   image,
   source_code_link,
-  demo_link,
   details_link,
 }) => {
   return (
     <Card className='project-card-view'>
-      <div className="position-absolute top-0 end-0 m-3 card-img_hover">
+      {/* <div className="position-absolute top-0 end-0 m-3 card-img_hover">
         <div
           className="black-gradient w-10 h-10 rounded-circle d-flex justify-content-center align-items-center cursor-pointer"
         >
@@ -22,7 +21,8 @@ const ProjectCards = ({
           <BsGithub />
         </Button>
         </div>
-      </div>
+      </div> */}
+
       <Card.Img
         variant='top'
         src={image}
@@ -34,24 +34,14 @@ const ProjectCards = ({
         <Card.Title>{name}</Card.Title>
         <Card.Text style={{ textAlign: 'justify' }}>{description}</Card.Text>
         
-        <Button variant='primary' href={details_link} target='_blank'>
+       {details_link && <Button variant='primary' href={details_link} target='_blank' style={{ marginRight: '10px' }}>
           <CgWebsite /> &nbsp; Details
-        </Button>{' '}
+        </Button>} {' '}
 
-        {/* <Button variant='primary' href={source_code_link} target='_blank'  style={{ marginLeft: '10px' }}>
+        {source_code_link && <Button variant='primary' href={source_code_link} target='_blank'  >
           <BsGithub /> &nbsp; Code
-        </Button>{' '} */}
+        </Button>}{' '}
 
-        {demo_link && (
-          <Button
-            variant='primary'
-            href={demo_link}
-            target='_blank'
-            style={{ marginLeft: '10px' }}
-          >
-            Demo
-          </Button>
-        )}
       </Card.Body>
     </Card>
   );

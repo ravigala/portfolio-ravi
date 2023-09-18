@@ -1,3 +1,4 @@
+// Skill logos
 import java from "./tech/java.png";
 import javascript from "./tech/javascript.png";
 import reactjs from "./tech/reactjs.png";
@@ -12,10 +13,13 @@ import tailwind from "./tech/tailwind.png";
 import bootstrap from "./tech/bootstrap.png";
 import git from "./tech/git.png";
 
-
+// Project images
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+
+// Contact form image
+import contactbanner from "./contactbanner.png";
 
 export {
   javascript,
@@ -34,4 +38,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  contactbanner
 };

@@ -9,10 +9,11 @@ function Projects({ numProjects }) {
   const projectsToDisplay = numProjects ? projects.slice(0, numProjects) : projects;
 
   return (
+    <section>
     <Container fluid className="project-section">
       <Particle />
-      <Container>
-        <h1 className="project-heading purple">
+      <Container className="project-content">
+        <h1 className="section-heading purple">
           <strong className="purple">Projects</strong>
         </h1>
 
@@ -36,6 +37,7 @@ function Projects({ numProjects }) {
         )}
       </Container>
     </Container>
+    </section>
   );
 }
 

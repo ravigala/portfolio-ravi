@@ -32,7 +32,7 @@ function Projects({ numProjects }) {
         {/* Conditionally render the button */}
         {numProjects && (
           <div className="text-center">
-            <Button variant="primary">View All Projects</Button>
+            <Button variant="primary">See More Projects</Button>
           </div>
         )}
       </Container>

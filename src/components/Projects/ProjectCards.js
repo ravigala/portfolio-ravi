@@ -27,7 +27,7 @@ const ProjectCards = ({
         variant='top'
         src={image}
         alt='project_image'
-        style={{ maxHeight: '250px' }}
+        style={{ height: '250px'}}
       />
       
       <Card.Body>

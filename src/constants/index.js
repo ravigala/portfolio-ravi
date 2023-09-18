@@ -12,9 +12,12 @@ import {
   appscript,
   php,
   git,
-  carrent,
-  jobit,
-  tripguide
+  varcode,
+  pfoptimizer,
+  noteVault,
+  newsflow,
+  helpinghands,
+  tradeshow,
 } from "../Assets";
 
 const technologies = [
@@ -32,7 +35,7 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
     link: "https://react.dev/"
-    
+
   },
   {
     name: "Node JS",
@@ -88,28 +91,54 @@ const technologies = [
 
 const projects = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    image: carrent,
-    source_code_link: "https://github.com/",
+    name: "Varcode",
+    description: "VarCode is an online code compiler and editor built using ReactJs, NodeJs, MongoDB and Judge0 Api. It supports over 20 programming languages, enabling users to run, save, and download their code with ease, from anywhere and at any time.",
+    image: varcode,
+    source_code_link: "",
+    demo_link: "",
+    details_link: "",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    image: jobit,
-    source_code_link: "https://github.com/",
-    demo_link: "abc.com",
-    details_link: "abc.com"
+    name: "NoteVault",
+    description: "NoteVault is a secure note management web app powered by React.js, Express.js, and MongoDB. Users can create, edit, and delete notes via a secure API with robust authentication and authorization.",
+    image: noteVault,
+    source_code_link: "",
+    demo_link: "",
+    details_link: "",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    name: "NewsFlow",
+    description: "NewsFlow is a dynamic web application that offers real-time global news with user-friendly features like category-based filtering and infinite scrolling. Developed using ReactJS, Bootstrap, and NewsAPI",
+    image: newsflow,
+    source_code_link: "",
+    demo_link: "",
+    details_link: "",
+  },
+  {
+    name: "Helping Hands",
+    description: "A web application created using JavaScript, PHP, MySQL and Bootstrap. It allows users to register, donate essential items to the less fortunate through various organizations, and conveniently track their donation history.",
+    image: helpinghands,
+    source_code_link: "",
+    demo_link: "",
+    details_link: "",
+  },
+  {
+    name: "Tradeshow Tracker",
+    description: "An event management tool powered by ReactJs, Tailwind Css, and Google Apps Script. It effortlessly filters and showcases upcoming events from Google Sheets, enabling real-time attendee tracking, editing, and addition.",
+    image: tradeshow,
+    source_code_link: "",
+    demo_link: "",
+    details_link: "",
+  },
+  {
+    name: "Portfolio Optimizer",
+    description: "It is a Flask-based web tool that harnesses 20+ years of historical data from Yahoo Finance to generate 3 portfolios provide expected returns. Users just have to input their preferred stocks, investment amount, and time horizon.",
+    image: pfoptimizer,
+    source_code_link: "",
+    demo_link: "",
+    details_link: "",
   },
 ];
+
 
 export { technologies, projects };

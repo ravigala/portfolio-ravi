@@ -14,9 +14,12 @@ import bootstrap from "./tech/bootstrap.png";
 import git from "./tech/git.png";
 
 // Project images
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import varcode from "./varcode.png";
+import pfoptimizer from "./pfoptimizer.png";
+import noteVault from "./noteVault.png";
+import newsflow from "./newsflow.png";
+import helpinghands from "./helpinghands.png";
+import tradeshow from "./tradeshow.png";
 
 // Contact form image
 import contactbanner from "./contactbanner.png";
@@ -35,8 +38,11 @@ export {
   appscript,
   php,
   git,
-  carrent,
-  jobit,
-  tripguide,
+  varcode,
+  pfoptimizer,
+  noteVault,
+  newsflow,
+  helpinghands,
+  tradeshow,
   contactbanner
 };

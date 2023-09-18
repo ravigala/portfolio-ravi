@@ -13,7 +13,7 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-      <h1 style={{ fontSize: "2.6em", color:"white" }}>
+      <h1 className='section-heading'>
               About Me
             </h1>
         <Row>

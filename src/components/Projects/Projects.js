@@ -18,7 +18,8 @@ function Projects({ numProjects }) {
         </h1>
 
         <p className='project-description'>
-          Hello there! Welcome to my project gallery. The following projects showcase my skills and experience through real-world examples of my work. They are more than just lines of code – they represent my journey. Each project includes a detailed explanation, links to code repositories, and live demos.
+          Hello there! Welcome to my project gallery. The following projects showcase my skills and experience through real-world examples of my work. They are more than just lines of code – they represent my journey. 
+          {/* Each project includes a detailed explanation, links to code repositories, and live demos. */}
         </p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>

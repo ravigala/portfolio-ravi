@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import { projects } from "../../constants";
+import { Link } from 'react-router-dom';
 
 function Projects({ numProjects }) {
   // If numProjects is not provided, set it to the total number of projects
@@ -33,7 +34,9 @@ function Projects({ numProjects }) {
         {/* Conditionally render the button */}
         {numProjects && (
           <div className="text-center">
-            <Button variant="primary">See More Projects</Button>
+            <Link to="/project">
+            <Button variant="primary" >See More Projects</Button>
+            </Link>
           </div>
         )}
       </Container>

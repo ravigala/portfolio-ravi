@@ -28,5 +28,4 @@ yarn-error.log*
 Server/node_modules
 Server/config.js
 
-README.md
-src/components/Resume/ResumeNew.js
+public/netlify.toml

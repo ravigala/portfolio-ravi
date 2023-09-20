@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { contactbanner } from "../../Assets";
 import Particle from "../Particle";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -17,6 +18,12 @@ const Contact = () => {
   const form = useRef(null);
 
   const [loading, setLoading] = useState(false);
+
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
+
+  const handleRecaptchaChange = (value) => {
+    setRecaptchaValue(value);
+  };
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
@@ -54,6 +61,7 @@ const Contact = () => {
       name,
       email,
       message,
+      recaptchaResponse: recaptchaValue, // to get the reCAPTCHA response
     };
 
     try {
@@ -67,7 +75,9 @@ const Contact = () => {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       });
 
-      if (response.ok) {
+      const data = await response.json()
+
+      if (data.status === "success") {
         notify("Email sent successfully", false);
         setLoading(false);
         setFormState({
@@ -80,6 +90,7 @@ const Contact = () => {
         setLoading(false);
       }
     } catch (error) {
+      console.log(error)
       notify("Error sending email", true);
       setLoading(false);
     }
@@ -157,11 +168,19 @@ const Contact = () => {
                 ></textarea>
               </div>
 
+              <div className="mb-3">
+                <ReCAPTCHA
+                  sitekey="6LeEuj0oAAAAAF2715SXenO4k8YqZVqEkiZx9AP7"
+                  onChange={handleRecaptchaChange}
+                  className="captcha-box"
+                />
+              </div>
+
               <div className="pt-3">
                 <button
                   type="submit"
                   className="btn btn-primary"
-                  disabled={loading}
+                  disabled={loading || !recaptchaValue}
                 >
                   {!loading ? "Send Message" : "Sending...."}
                 </button>

@@ -10,9 +10,11 @@ const ProjectCards = ({
   image,
   source_code_link,
   details_link,
+  demo_link
 }) => {
   return (
     <Card className='project-card-view'>
+      {/* Code for github link at top right of card */}
       {/* <div className="position-absolute top-0 end-0 m-3 card-img_hover">
         <div
           className="black-gradient w-10 h-10 rounded-circle d-flex justify-content-center align-items-center cursor-pointer"
@@ -36,6 +38,10 @@ const ProjectCards = ({
         
        {details_link && <Button variant='primary' href={details_link} target='_blank' style={{ marginRight: '10px' }}>
           <CgWebsite /> &nbsp; Details
+        </Button>} {' '}
+        
+       {demo_link && <Button variant='primary' href={demo_link} target='_blank' style={{ marginRight: '10px' }}>
+          <CgWebsite /> &nbsp; Demo
         </Button>} {' '}
 
         {source_code_link && <Button variant='primary' href={source_code_link} target='_blank'  >
